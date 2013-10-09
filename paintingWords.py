@@ -32,7 +32,7 @@ def paint(occ):
     col = row + 1
     matrix = r.matrix(vector, row, col)
     color = robjects.r("rainbow")(20)
-    r.png(filename=os.path.splitext(argv[1])[0]+"2.png")
+    r.png(filename=os.path.splitext(argv[1])[0]+".png")
     r.image(matrix, axes=False, breaks=robjects.IntVector([0,10,20,30,440,50,60,70,80,90,100,200,300,400,500,600,700,800,900,1000,2000]), col=color)
     r('dev.off')()
 
